@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+ import './App.css';
+import AppHeader from './component/AppHeader';
+import PandaItem from './component/PandaItem';
+import PandaPost from './component/PandaPost';
+ 
+ 
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+     <div className='app'>
+      {/* <header className='app-header'>
+        <img className='app-header-logo' src='/public/pandapic/logopanda.jpg' alt='pandalogo'/>
+        <h4>Panda Cute</h4>
+      </header> */}
+
+      <AppHeader></AppHeader>
+      
+      <div className='app-grid'>
+        <PandaItem></PandaItem>
+        <PandaItem></PandaItem>
+        <PandaItem></PandaItem>
+        <PandaItem></PandaItem>
+      </div>
+      <PandaPost></PandaPost>
+     </div>
   );
 }
 
